@@ -1,11 +1,5 @@
-/* Aplausos */
-function tocaSomAplausos(){
-    document.querySelector("#som_tecla_aplausos").play();
-}
-
-/* Vaia */
-function tocaSomVaia(){
-    document.querySelector("#som_tecla_vaia").play();
+function tocaSom(idElementoAudio){
+    document.querySelector(idElementoAudio).play();
 }
 
 const listaDeTeclas = document.querySelectorAll(".tecla");
@@ -14,7 +8,9 @@ let contador = 0;
 
 //enquanto
 while(contador < listaDeTeclas.length){
-    listaDeTeclas[0].onclick = tocaSomAplausos;
+    listaDeTeclas[contador].onclick = function (){
+        tocaSom('#som_tecla_aplausos');
+    }
     contador = contador + 1;
     console.log(contador);
 }
