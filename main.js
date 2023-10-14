@@ -7,14 +7,14 @@ function tocaSomAplausos(){
 function tocaSomVaia(){
     document.querySelector("#som_tecla_vaia").play();
 }
-const listaDeTeclas = document.querySelectorAll(".tecla");
 
-listaDeTeclas[0].onclick = tocaSomAplausos;
-listaDeTeclas[1].onclick = tocaSomVaia;
+const listaDeTeclas = document.querySelectorAll(".tecla");
 
 let contador = 0;
 
 //enquanto
-while(){
-    
+while(contador < listaDeTeclas.length){
+    listaDeTeclas[0].onclick = tocaSomAplausos;
+    contador = contador + 1;
+    console.log(contador);
 }
