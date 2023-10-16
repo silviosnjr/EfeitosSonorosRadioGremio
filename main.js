@@ -8,16 +8,9 @@ let contador = 0;
 
 //enquanto
 while(contador < listaDeTeclas.length){
-    const tecla = listaDeTeclas[contador];
-    const efeito = tecla.classList[1];
-
-    //template string
-    const idAudio = `#som_${efeito}`;
-
-    //O template string poderia ser substituído por concatenação
-    //const idAudio = "#som_"+efeito;
-
-    tecla.onclick = function (){
+    const efeito = listaDeTeclas[contador].classList[1];
+    const idAudio = "#som_"+efeito;
+    listaDeTeclas[contador].onclick = function (){
         tocaSom(idAudio);
     }
     contador = contador + 1;
