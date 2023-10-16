@@ -14,7 +14,7 @@ let contador = 0;
 
 //enquanto
 while(contador < listaDeTeclas.length){
-    listaDeTeclas[0].onclick = tocaSomAplausos;
+    listaDeTeclas[contador].onclick = tocaSomAplausos;
     contador = contador + 1;
     console.log(contador);
 }
