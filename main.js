@@ -1,7 +1,7 @@
 function tocaSom(idElementoAudio){
     const elemento = document.querySelector(idElementoAudio);
     if (elemento === null){
-        alert("Elemento não encontrado");
+        console.log("Elemento não encontrado");
     }
 }
 
