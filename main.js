@@ -1,5 +1,6 @@
+let elemento = null;/*conteúdo extra:transformamos a constante elemento em uma variável global*/ 
 function tocaSom(idElementoAudio){
-    const elemento = document.querySelector(idElementoAudio);
+    elemento = document.querySelector(idElementoAudio); /*ajuste: variável recebe o áudio*/
     if (elemento && elemento.localName === 'audio') {
         elemento.play();
     }else{
@@ -15,6 +16,7 @@ for(let contador = 0; contador < listaDeTeclas.length; contador++){
     const idAudio = `#som_${efeito}`;
 
     tecla.onclick = function (){
+        if(elemento){elemento.pause();}/*conteúdo extra: para o áudio antes de iniciar outro*/
         tocaSom(idAudio);
     }
 
